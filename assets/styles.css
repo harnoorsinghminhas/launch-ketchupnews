@@ -122,4 +122,5 @@ h3{font-family:var(--fd);font-weight:600;color:var(--ink);font-size:1.2rem;margi
 @media (min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;align-items:start;gap:56px}.trio{grid-template-columns:repeat(3,1fr)}.pb{grid-template-columns:1fr auto;gap:60px}.plans{overflow-x:visible}.plan{flex:1 1 0;min-width:0}.fin{grid-template-columns:240px 1fr;gap:48px}.top{padding:20px 0}}
 /* placeholder logo slot (see README) */
 a.brand img.brand-logo,a.logo img.brand-logo,img.brand-logo{display:block;height:38px;width:auto;max-width:100%}
+.trade-name span{display:inline-block;margin:0 .6rem}.trade-name{max-width:70rem;margin:0 auto;padding:1rem 16px 1.75rem;font-size:.9rem;line-height:1.4;text-align:center;color:inherit;opacity:.85;grid-column:1/-1}
 
