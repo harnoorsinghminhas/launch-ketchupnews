@@ -31,6 +31,6 @@ The logo appears once, as a single image in `index.html`:
 - The sign-up posts the visitor's email to the Signal API (`request-link`), which emails a confirmation link. The API must allow this
   page's origin (`https://ketchupnews.com`, and `https://www.ketchupnews.com`) in its CORS list (done 2026-10-03 on the dev API; it must also be in the infra template parameter SignalApiAllowedOrigins).
 - The content-security policy is in a `<meta>` tag in `index.html`. It allows this site's own files, the Google Fonts the design uses, a POST to the Signal API
-  and, for the 'This hour' brief, a read of the public hourly file on media.theagentsignal.com.
+  and, for the 'This hour' brief, a read of the public hourly file on siagentsignal.com (its audio plays from media.theagentsignal.com).
   If you add anything external, add it to that policy.
 - Everything on the site is a preview; example and placeholder content is labelled "example".
