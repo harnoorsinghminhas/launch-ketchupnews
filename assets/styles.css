@@ -154,5 +154,8 @@ h3{font-family:var(--fd);font-weight:600;color:var(--ink);font-size:1.2rem;margi
 a.brand img.brand-logo,a.logo img.brand-logo,img.brand-logo{display:block;height:38px;width:auto;max-width:100%}
 .trade-name span{display:inline-block;margin:0 .6rem}.trade-name{max-width:70rem;margin:0 auto;padding:1rem 16px 1.75rem;font-size:.9rem;line-height:1.4;text-align:center;color:inherit;opacity:.85;grid-column:1/-1}
 
+/* legal-ae: the credit line beside the first SI mention (pick B; shared snippet, _gen/legal_ae.py) */
+.si-credit{margin:.75rem 0 0;font-size:.9rem;line-height:1.5;color:inherit;opacity:.85;text-align:inherit}.si-credit a{color:inherit;text-decoration:underline}
+
 /* si-guide: the free Superintelligence (SI) Guide card (shared snippet, _gen/si_guide.py) */
 .sg{padding:4px 0 28px}.sg-card{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 22px;box-sizing:border-box;width:min(100% - 32px,52rem);margin:0 auto;padding:18px 22px;background:var(--panel);border:1px solid var(--line-strong);border-radius:var(--r,12px);text-align:left}.sg-txt{flex:1 1 17rem;min-width:0}.sg-card h2{margin:0 0 4px;font:700 1.25rem/1.25 var(--fd);letter-spacing:0;text-transform:none;max-width:none;color:var(--ink)}.sg-card p{margin:0;font-size:1rem;line-height:1.5;color:var(--ink2)}.sg-card p b{color:var(--ink)}.sg .btn.sg-btn{display:inline-flex;align-items:center;justify-content:center;flex:none;width:auto;text-decoration:none;text-align:center;white-space:normal}.sg .btn.sg-btn,.sg .btn.sg-btn:hover{color:var(--accent-ink)}@media (max-width:520px){.sg-card{padding:16px}.sg .btn.sg-btn{width:100%}}
