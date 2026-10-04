@@ -78,9 +78,9 @@ $$(".js-join").forEach(function (form) {
 /* ---------- reserve / buy: preview checkout (no payment is taken) ---------- */
 var INSIDER = "Reservation holders are insiders: first access to new features, products and prices, sneak peeks by email, and notes from the build room.";
 var TIERS = {
-  pro: { n: "Pro", get: ["A catch-up made for your role, every weekday", "The full hourly radio-style brief", "Three lanes, full text"], list: "$9.99/mo", found: "$7.99/mo", yr: "$99/yr at launch, $79/yr founding", save: "Save $2/mo, $24/yr, 20%", dep: "$9.99" },
-  max: { n: "MAX", get: ["Everything in Pro, every lane in full", "Morning and evening deep dives", "All 24 white papers and the member forum"], list: "$19.99/mo", found: "$14.99/mo", yr: "$199/yr at launch, $149/yr founding", save: "Save $5/mo, $60/yr, 25%", dep: "$29" },
-  ultra: { n: "Ultra", get: ["Everything in MAX", "The 21-book library and training by job title", "The full Defense Playbook and the insider circle"], list: "$99.99/mo", found: "$69.99/mo", yr: "$999/yr at launch, $699/yr founding", save: "Save $30/mo, $360/yr, 30%", dep: "$99" }
+  pro: { n: "Pro", get: ["A catch-up made for your role, every weekday", "The full hourly radio-style brief", "Three lanes, full text"], list: "$9.99/mo", found: "$7.99/mo", yr: "$99/yr at launch, $79/yr founding", save: "Nothing renews or converts on its own. At launch we email you a link: opt in and your deposit counts toward your first payment, or do nothing and it is refunded in full.", dep: "$9.99" },
+  max: { n: "MAX", get: ["Everything in Pro, every lane in full", "Morning and evening deep dives", "All 24 white papers and the member forum"], list: "$19.99/mo", found: "$14.99/mo", yr: "$199/yr at launch, $149/yr founding", save: "Nothing renews or converts on its own. At launch we email you a link: opt in and your deposit counts toward your first payment, or do nothing and it is refunded in full.", dep: "$29" },
+  ultra: { n: "Ultra", get: ["Everything in MAX", "The 21-book library and training by job title", "The full Defense Playbook and the insider circle"], list: "$99.99/mo", found: "$69.99/mo", yr: "$999/yr at launch, $699/yr founding", save: "Nothing renews or converts on its own. At launch we email you a link: opt in and your deposit counts toward your first payment, or do nothing and it is refunded in full.", dep: "$99" }
 };
 var dlg = $("#checkout"), lastBtn = null;
 if (dlg) {
@@ -91,10 +91,10 @@ if (dlg) {
     b.addEventListener("click", function () {
       var T = TIERS[b.getAttribute("data-tier")]; lastBtn = b; fill(T.get);
       $("#co-h").textContent = "Reserve " + T.n;
-      $("#coPrice").textContent = "Launch price " + T.list + ". Founding price " + T.found + ", locked while you stay subscribed. " + T.yr + ".";
+      $("#coPrice").textContent = "Launch price " + T.list + ". Founding price " + T.found + ", yours if you opt in at launch, kept while you stay subscribed. " + T.yr + ".";
       $("#coSave").textContent = T.save;
       $("#coPay").textContent = "Reserve for " + T.dep;
-      $("#coRefund").textContent = "Refundable on request before launch only. This " + T.dep + " deposit reserves the founding price; it is not a subscription payment. The price shown is the price you pay at checkout.";
+      $("#coRefund").textContent = "Refundable in full until you opt in at launch. This " + T.dep + " deposit holds your place at the founding price; it is not a subscription. The price shown is the price you pay at checkout.";
       $("#coInsider").textContent = INSIDER; $("#coInsider").hidden = false;
       open();
     });
@@ -104,9 +104,9 @@ if (dlg) {
       lastBtn = b; fill(["A 100-page PDF", "The full audio version", "Delivered right away"]);
       $("#co-h").textContent = "Buy the AI-Era Defense Playbook";
       $("#coPrice").textContent = "$49, one-time purchase, all-in.";
-      $("#coSave").textContent = "A finished product at its normal price. No discount.";
+      $("#coSave").textContent = "The download link works for 30 days, up to 10 downloads.";
       $("#coPay").textContent = "Buy for $49";
-      $("#coRefund").textContent = "A finished digital product, delivered right away. Read the refund terms before you pay.";
+      $("#coRefund").textContent = "A digital download: we email the link after payment, usually within minutes. If it fails or is not as described, write within 14 days for a fix or a full refund.";
       $("#coInsider").hidden = true;
       open();
     });
