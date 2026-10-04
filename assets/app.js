@@ -117,5 +117,5 @@ if (dlg) {
 }
 
 /* ---------- external links always open in a new tab ---------- */
-$$("a[href^='http']").forEach(function (a) { a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); });
+$$("a[href^='http']:not([href^='https://siagentsignal.com/si/'])").forEach(function (a) { a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); });
 })();
